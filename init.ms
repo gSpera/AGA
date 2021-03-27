@@ -1,6 +1,11 @@
+.MA
 .so macros.ms
+.EQ
+include macros.eqn
+.EN
 
-.CA Introduzione
+.SH 1
+Introduzione
 .PP
 Questo testo si pone l'obbiettivo di introddure l'algebra astratta in modo semplice e comprensibile, con raffigurazioni, immagini ed esercizi dei concetti, senza però trascurare l'accuratezza delle informazioni.
 L'obbiettivo principale è quello di safamare la curiosità dei lettori, che si approcciano per la prima volta a questa materia rendendo concreti gli argomenti trattati.
@@ -26,13 +31,13 @@ spline from (0,0) then right 0.2 down 1.1\
 "1" at (-0.7, -0.3)
 "\(dg" at (-0.8, -0.9)
 .PE
-Questo è un insieme formato dalla lettera 'A', dal numero\**
-.FS
+Questo è un insieme formato dalla lettera 'A', dal numero
+.FT
 Diamo il concetto di 'numero' per scontato, ma questo può essere costruito tramite strumenti che avremo tra poco, si faccia riferimento all'Appendice A
 .FE
  '1' e dal simbolo '\(dg', possiamo anche scriverlo come:
 .EQ
-{ 'A', 1, \(dg }
+mark txt "{" 'A', 1, \(dg txt "}"
 .EN
 
 .PP
@@ -41,15 +46,15 @@ Convenzionalmente chiameremo gli insiemi con una lettera latina
 Definiamo quindi 
 .I 'I' :
 .EQ
-I = { 'A', 1, \(dg }
+I = lineup txt "{" 'A', 1, \(dg txt "}"
 .EN
 
 .PP
 Lavoreremo principalmente con insiemi numerici, formati, cioè, solamente da numeri, e in molti casi di insiemi aventi infiniti elementi.
 Dobbiamo quindi introdurre un nuovo modo di definire un insieme, un modo più formale che permette di includere infiniti elementi.
 
+.PP
 Consideriamo, per esempio, di voler avere un insieme formato da tutti i numeri primi, essendo questi infiniti non possiamo elencarli tutti, tantomeno rappresentarli tutti graficamente come prima:
 .EQ
-P = { forall x in NN / x è primo }
+P = txt "{" forall x in NN / x txt " è primo" txt "}"
 .EN
-

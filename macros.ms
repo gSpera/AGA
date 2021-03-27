@@ -1,5 +1,8 @@
 \" Macros file
 
+\" Font
+.fp 10 M DJVM
+
 \" Strings
 .ds TOC Indice
 
@@ -18,6 +21,12 @@
 .B2
 ..
 
+
+\" Foot
+.de FT
+\**
+.FS
+..
 
 \" Bulletted list
 .de LI
@@ -39,13 +48,8 @@
 .NH 2
 \\$*
 .XS
-\\$*
+\(mi \\$*
 .XE
 .PP
 ..
 
-\" EQN
-.EQ
-define forall `\(fa`
-\" define NN `ℤ`
-.EN

@@ -11,23 +11,17 @@ Author .AU
 
 \".2C
 
-.NH 1
-Title
-
-.LP
-Heading x (Numbered) .NH x
-
 .CA Title
-.LP
-Heading x (Numbered) .SH x
-.I Not "" (
-Indented)
+Chapter: .CA Title
+
+.SA Sub-chapter / Section
+Section: .SA Title
 
 .PP
 Paragraph 
 .I .PP
 Indented
-.PP
+.LP
 Paragraph
 .I LP
 .I Not "" (
@@ -71,13 +65,12 @@ Text in
 .CW "Costant width"
 with
 .I .CW .
-Content in foot\**
-.FS
+Content in foot
+.FT
 This is the foot content.
 .FE
 
-.SH 2
-Cite
+.SA Cite
 .PP
 Lorem ipsum dolorm sit amet
 Some posit the hopping
@@ -86,8 +79,7 @@ lunchroom to be less than unblessed. A conifer is a kitten from the right perspe
 In ancient times few can name a bosker server that isn't a dingbats zone. Those heights are nothing more than hills. Some posit the quaggy melody to be less than unversed. Authors often misinterpret the cause as an uptown form, when in actuality it feels more like a wizen Thursday.
 .CE "Lorem Ipsum"
 Few can name a yarer help that isn't a leachy dungeon. The errant date comes from an uncursed rise. In modern times a sarcoid cork is a badge of the mind. Ethiopias are folded menus. One cannot separate chives from sighted peaks.
-.NH 2
-Bullet list
+.SA Bullet list
 .PP
 .IP \(bu 
 Bullet list
@@ -101,8 +93,7 @@ bulletting lists.
 Or use
 .I ".LI"
 
-.SH 2
-Align and decoration
+.SA Align and decoration
 .LP
 .BD
 Centered text, with
@@ -123,8 +114,7 @@ and
 .I .B2
 .B2
 
-.SH 1
-Graph
+.CA Graph
 .LP
 .CW
 define point { circle rad 0.01 fill 1 $1 above }

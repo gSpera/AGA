@@ -1,0 +1,6 @@
+define forall `\(fa`
+define in `\(mo`
+define mathFont `font 10`
+define NN `mathFont "\[u2115]"`
+define / `{size 13 down 10 mathFont {"/"}}`
+define txt `roman`
