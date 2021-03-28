@@ -31,6 +31,7 @@
 \" Bulletted list
 .de LI
 .IP \(bu
+\\$*
 ..
 
 \" Heading

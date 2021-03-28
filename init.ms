@@ -18,7 +18,11 @@ In questo primo capitolo introdurremmo alcuni concetti fondamentali, che poi use
 L'idea di isiemi viene introdotta a ciascuno di noi già da piccoli, un insieme è... un 'insieme' di oggetti, una collezione
 .I "non ordinata"
 di elementi di diverso tipo.
-Un insieme di fatti puù essere costituito da qualsiasi cosa, facciamo un esempio:
+Non esiste infatti una definizione di insieme, questo è un concetto
+.I primitivo
+e quindi non derivabile da nessun altro concetto.
+
+Un insieme di fatti può essere costituito da qualsiasi cosa, facciamo un esempio:
 \fB
 .ps +4
 .PS
@@ -54,7 +58,37 @@ Lavoreremo principalmente con insiemi numerici, formati, cioè, solamente da num
 Dobbiamo quindi introdurre un nuovo modo di definire un insieme, un modo più formale che permette di includere infiniti elementi.
 
 .PP
-Consideriamo, per esempio, di voler avere un insieme formato da tutti i numeri primi, essendo questi infiniti non possiamo elencarli tutti, tantomeno rappresentarli tutti graficamente come prima:
+Consideriamo, per esempio, di voler avere un insieme formato da tutti i numeri primi, essendo questi infiniti non possiamo elencarli tutti, tantomeno rappresentarli tutti graficamente come prima, ma possiamo descriverli:
 .EQ
 P = txt "{" forall x in NN / x txt " è primo" txt "}"
 .EN
+
+Chiediamoci ora se, preso questo insieme possiamo svolgerci qualche 
+.I operazione ,
+per esempio, possiamo fare la somma tra due elementi di questo insieme, o dire quale sia il più grande?
+.EQ
+pile {
+P = txt "{" 1, 2, 3, A, \(dg txt "}"
+above 1, 2 in P
+above 1+2 = 3
+above 1 <= 2
+}
+.EN
+Entrambe operazioni
+.B "non hanno senso" ,
+ora lavoriamo in
+.I insiemi
+e ne la somma ne il minore-uguale hanno alcun significato, è importante capire questo concetto,
+distinguendo i numeri che noi conosciamo dalle strutture algebriche che andremo a costruire.
+
+.SA Operazioni tra insiemi
+Definiamo ora alcuni strumenti che sicuramente ci serviranno durante il nostro percorso, le operazioni di:
+.LI Unione
+.LI Intersezione
+.LI Sottrazione tra insiemi
+.LI Prodotto cartesiano
+.LI Insieme delle Parti
+
+.PP 
+.B Unione
+questa è un unione
