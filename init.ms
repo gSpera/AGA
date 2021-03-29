@@ -27,10 +27,10 @@ Un insieme di fatti può essere costituito da qualsiasi cosa, facciamo un esempi
 .ps +4
 .PS
 spline from (0,0) then right 0.2 down 1.1\
-	then left 1.7 down 0.3\
-	then left 0.2 up 0.5\
-	then left 0.5 up 0.7\
-	to (0,0)
+then left 1.7 down 0.3\
+then left 0.2 up 0.5\
+then left 0.5 up 0.7\
+to (0,0)
 "A" at (0.3, -0.7)
 "1" at (-0.7, -0.3)
 "\(dg" at (-0.8, -0.9)
@@ -39,7 +39,7 @@ Questo è un insieme formato dalla lettera 'A', dal numero
 .FT
 Diamo il concetto di 'numero' per scontato, ma questo può essere costruito tramite strumenti che avremo tra poco, si faccia riferimento all'Appendice A
 .FE
- '1' e dal simbolo '\(dg', possiamo anche scriverlo come:
+'1' e dal simbolo '\(dg', possiamo anche scriverlo come:
 .EQ
 mark txt "{" 'A', 1, \(dg txt "}"
 .EN
@@ -86,9 +86,128 @@ Definiamo ora alcuni strumenti che sicuramente ci serviranno durante il nostro p
 .LI Unione
 .LI Intersezione
 .LI Sottrazione tra insiemi
-.LI Prodotto cartesiano
 .LI Insieme delle Parti
+.LI Prodotto cartesiano
 
 .PP 
-.B Unione
-questa è un unione
+.B Unione "" L'
+è un operazione tra due insiemi e che crea un nuovo insieme formato da tutti gli elementi compresi nei due insiemi:
+.EQ
+A Union B = txt "{" x / x in A OR x in b txt "}"
+.EN
+Si noti l'operatore logico "o"
+.ST (Inclusivo) ,
+basta quindi che valga
+.I una
+proposizione.
+
+.PP 
+.B Intersezione "" L'
+è un operazione tra due insiemi e che crea un nuovo insieme formato da tutti gli elementi compresi in entrambi gli insiemi:
+.EQ
+A Intersection B = txt "{" x / x in A AND x in b txt "}"
+.EN
+Si noti l'operatore logico "e", cioè
+.I entrambe
+le proposizioni devono valere.
+
+.PP
+.B Sottrazione "" "La "
+tra due insiemi è un operazione tra due insiemi e che crea un nuovo insieme formato da tutti gli elementi del primo insieme non contenuti nel secondo insieme:
+.EQ
+A \\ B = txt "{" x / x in A AND x notin B txt "}"
+.EN
+.PP
+.B Sottoinsieme
+Quando dati due insiemi, tutti gli elementi del primo appartengono anche al secondo allora il primo è 
+.I sottoinsieme
+del secondo insieme.
+.EQ
+A Subset B = txt"{" forall a in A, a in B txt"}"
+.EN
+Importante considerare che ogni insieme è sottoinsieme di se stesso.
+.EQ
+A Subset A Space forall A
+.EN
+
+.PP
+.B "insieme delle parti" "" L'
+è a sua volta un insieme formato a sua volta da tutte le parti dell'insieme di partenza.
+
+.PP
+.B "Prodotto Cartesiano" "" "Il "
+è una delle operazioni più importanti, opera, come le altre, su due insiemi e crea l'insieme delle coppie
+.I ordinate
+formate dagli insiemi.
+Facciamo un esempio per comprendere meglio:
+.EQ
+A = txt "{" 1, 2, txt "A", \(dg txt "}", Space B = txt "{" txt"A", txt"B", txt"C" txt"}"
+.EN
+.EQ
+lpile {
+A Times B = txt "{"
+above
+matrix {
+ccol {( 1; txt"A"), above ( 2; txt"A"), above ( txt"A"; txt"A"), above ( \(dg; txt"A"),}
+ccol {( 1; txt"B"), above ( 2; txt"B"), above ( txt"A"; txt"B"), above ( \(dg; txt"B"),}
+ccol {( 1; txt"C"), above ( 2; txt"C"), above ( txt"A"; txt"C"), above ( \(dg; txt"C"),}
+}
+above txt"}"
+}
+.EN
+
+.SA Tuple, Ennuple
+Nella definizione di prodotto cartesiano abbiamo introdotto una coppia di valori,
+parliamone ora più nel dettaglio.
+
+.PP
+Una coppia di valori è anche chiamata
+.B Tupla
+ed è un insieme
+.I ordinato
+di 2 elementi.
+Ovviamente esistono triple, quadruple e così via, indichiamo con
+.B Ennupla
+un insieme ordinato di 
+.I n
+elementi. Indichiamo un singolo elemento della n-upla tramite l'indice:
+.EQ
+lpile {
+A = (\(dg; bold A)
+above
+A sub 1 = \(dg
+above
+A sub 2 = bold A
+}
+.EN
+Indichiamo l'elemento generico tramite l'indice
+.I i
+iterandolo per tutti i numeri necessari, indicheremo questo con:
+.EQ
+lpile {
+i = 1,2,...,n
+above
+i = 1,2,...
+above
+i = 0,2,...10
+}
+.EN
+Nel caso ci servisse possiamo iterare 
+.I i
+su tutti i numeri naturali, come nell'esempio.
+L'incremento non deve essere di 1 necessariamente, ma può assumere qualsiasi valore necessario, nel terzo caso i numeri pari.
+
+.PP
+Il concetto di tupla non è primitivo di per se, ma la sua definizione non è banale a partire dagli insiemi.
+Però è possibile definire una ennupla di qualsiasi dimensione partendo dal concetto di coppia ordinata.
+.LP
+\('E possibile infatti vedere, per esempio, una tripla come una tupla formata dal primo elemento e da una tupla composta dal secondo e dal terzo elemento:
+.EQ
+(a sub 1; a sub 2; a sub 3 ) = (a sub 1; (a sub 2 ; a sub 3 ))
+.EN
+Quindi una ennupla può essere vista come una tupla formata dal primo elemento della ennulpla stessa e da una tupla composta dal secondo elemento della tupla, così via fino ad n.
+.EQ
+(a sub 1 ; a sub 2; ... ; a sub n ) = ( a sub 1 ; ( a sub 2 ; ( ... ; a sub n ) ) )
+.EN
+
+Quindi per induzione definiamo una ennupla.

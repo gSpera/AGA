@@ -1,6 +1,15 @@
 define forall `\(fa`
 define in `\(mo`
+define notin `\(nm`
 define mathFont `font 10`
 define NN `mathFont "\[u2115]"`
 define / `{size 13 down 10 mathFont {"/"}}`
+define AND `\[AN]`
+define OR `\[OR]`
 define txt `roman`
+define Union `mathFont \(cu`
+define Intersection `mathFont \(ca`
+define Times `mathFont \(mu`
+define Space `fwd 250`
+define PSubset `\(sb`
+define Subset `\(ib`
