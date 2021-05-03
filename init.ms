@@ -1,4 +1,4 @@
-.MA
+.AM
 .so macros.ms
 .EQ
 include macros.eqn
@@ -8,6 +8,8 @@ include macros.eqn
 Introduzione
 .PP
 Questo testo si pone l'obbiettivo di introddure l'algebra astratta in modo semplice e comprensibile, con raffigurazioni, immagini ed esercizi dei concetti, senza però trascurare l'accuratezza delle informazioni.
+.CRD CostruzioneNumeri "Appendice A"
+.CR CostruzioneNumeri
 L'obbiettivo principale è quello di safamare la curiosità dei lettori, che si approcciano per la prima volta a questa materia rendendo concreti gli argomenti trattati.
 
 .CA Insiemi
@@ -93,7 +95,7 @@ Definiamo ora alcuni strumenti che sicuramente ci serviranno durante il nostro p
 .B Unione "" L'
 è un operazione tra due insiemi e che crea un nuovo insieme formato da tutti gli elementi compresi nei due insiemi:
 .EQ
-A Union B = txt "{" x / x in A OR x in b txt "}"
+A Union B = txt "{" x / x in A OR x in B txt "}"
 .EN
 Si noti l'operatore logico "o"
 .ST (Inclusivo) ,
@@ -123,9 +125,9 @@ Quando dati due insiemi, tutti gli elementi del primo appartengono anche al seco
 .I sottoinsieme
 del secondo insieme.
 .EQ
-A Subset B = txt"{" forall a in A, a in B txt"}"
+A Subset B = txt"{" a in B, forall a in A txt"}"
 .EN
-Importante considerare che ogni insieme è sottoinsieme di se stesso.
+Interessante notare che ogni insieme è sottoinsieme di se stesso.
 .EQ
 A Subset A Space forall A
 .EN
@@ -211,3 +213,11 @@ Quindi una ennupla può essere vista come una tupla formata dal primo elemento d
 .EN
 
 Quindi per induzione definiamo una ennupla.
+
+.SA Relazioni
+La struttura di una relazione è alla base delle
+.I funzioni ,
+quindi è importante capirne il significato.
+
+.PP
+Una relazione

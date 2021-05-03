@@ -13,3 +13,4 @@ define Times `mathFont \(mu`
 define Space `fwd 250`
 define PSubset `\(sb`
 define Subset `\(ib`
+define implies `->`
