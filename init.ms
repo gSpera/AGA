@@ -7,14 +7,13 @@ include macros.eqn
 .SH 1
 Introduzione
 .PP
-Questo testo si pone l'obbiettivo di introddure l'algebra astratta in modo semplice e comprensibile, con raffigurazioni, immagini ed esercizi dei concetti, senza però trascurare l'accuratezza delle informazioni.
-.CRD CostruzioneNumeri "Appendice A"
-.CR CostruzioneNumeri
+questo libro si pone l'obbiettivo di introddure l'algebra astratta in modo semplice e comprensibile, con raffigurazioni, immagini ed utilizzi dei concetti, senza però trascurare l'accuratezza delle informazioni.
 L'obbiettivo principale è quello di safamare la curiosità dei lettori, che si approcciano per la prima volta a questa materia rendendo concreti gli argomenti trattati.
 
-.CA Insiemi
+.CA Insiemi, Relazioni e Funzioni
 In questo primo capitolo introdurremmo alcuni concetti fondamentali, che poi useremo per costruire tutte le nostre
 .I "strutture algebriche" .
+Parleremo di insiemi, relazioni e funzioni.
 
 .SA Insiemi
 L'idea di isiemi viene introdotta a ciascuno di noi già da piccoli, un insieme è... un 'insieme' di oggetti, una collezione
@@ -39,6 +38,7 @@ to (0,0)
 .PE
 Questo è un insieme formato dalla lettera 'A', dal numero
 .FT
+'1' e dall'elemento \(dg.
 Diamo il concetto di 'numero' per scontato, ma questo può essere costruito tramite strumenti che avremo tra poco, si faccia riferimento all'Appendice A
 .FE
 '1' e dal simbolo '\(dg', possiamo anche scriverlo come:
@@ -134,34 +134,23 @@ A Subset A Space forall A
 
 .PP
 .B "insieme delle parti" "" L'
-è a sua volta un insieme formato a sua volta da tutte le parti dell'insieme di partenza.
-
-.PP
-.B "Prodotto Cartesiano" "" "Il "
-è una delle operazioni più importanti, opera, come le altre, su due insiemi e crea l'insieme delle coppie
-.I ordinate
-formate dagli insiemi.
-Facciamo un esempio per comprendere meglio:
+è a sua volta un insieme formato a sua volta da tutti i sottonsiemi.
 .EQ
-A = txt "{" 1, 2, txt "A", \(dg txt "}", Space B = txt "{" txt"A", txt"B", txt"C" txt"}"
+A = txt"{" 1, bold A, \(dg txt"}"
 .EN
 .EQ
+P(A) = txt"{" txt "{}", txt"{" 1 txt"}", txt"{" bold A txt"}", txt"{" \(dg txt"}", txt"{" 1, bold A txt"}", txt"{" bold A, \(dg txt"}", txt"{" 1, \(dg txt"}", txt"{" 1, bold A, \(dg txt"}" txt"}"
+.EN
+Notiamo come l'insieme nullo, così come l'insieme completo, appartengano entrambi all'insieme delle parti.
+.EQ
 lpile {
-A Times B = txt "{"
+txt"{}" in P(A)
 above
-matrix {
-ccol {( 1; txt"A"), above ( 2; txt"A"), above ( txt"A"; txt"A"), above ( \(dg; txt"A"),}
-ccol {( 1; txt"B"), above ( 2; txt"B"), above ( txt"A"; txt"B"), above ( \(dg; txt"B"),}
-ccol {( 1; txt"C"), above ( 2; txt"C"), above ( txt"A"; txt"C"), above ( \(dg; txt"C"),}
-}
-above txt"}"
+A in P(A)
 }
 .EN
 
 .SA Tuple, Ennuple
-Nella definizione di prodotto cartesiano abbiamo introdotto una coppia di valori,
-parliamone ora più nel dettaglio.
-
 .PP
 Una coppia di valori è anche chiamata
 .B Tupla
@@ -214,10 +203,63 @@ Quindi una ennupla può essere vista come una tupla formata dal primo elemento d
 
 Quindi per induzione definiamo una ennupla.
 
-.SA Relazioni
-La struttura di una relazione è alla base delle
-.I funzioni ,
-quindi è importante capirne il significato.
-
+.SA Prodotto Cartesiano
 .PP
-Una relazione
+.B "Prodotto Cartesiano" "" "Il "
+è una delle operazioni più importanti, opera, a differenza di altre, su due insiemi per produrre l'insieme delle coppie
+.I ordinate
+formate dagli elementi del primo insieme e da quelli del secondo.
+
+Facciamo un esempio per comprendere meglio:
+.EQ
+A = txt "{" 1, 2, txt "A", \(dg txt "}", Space B = txt "{" txt"A", txt"B", txt"C" txt"}"
+.EN
+.EQ
+lpile {
+A Times B = txt "{"
+above
+matrix {
+ccol {Space ( 1; txt"A"), above Space ( 2; txt"A"), above Space ( txt"A"; txt"A"), above Space ( \(dg; txt"A"),}
+ccol {( 1; txt"B"), above ( 2; txt"B"), above ( txt"A"; txt"B"), above ( \(dg; txt"B"),}
+ccol {( 1; txt"C"), above ( 2; txt"C"), above ( txt"A"; txt"C"), above ( \(dg; txt"C"),}
+}
+above txt"}"
+}
+.EN
+E' possibile estendere l'idea di prodotto cartesiano a più elementi, definiamo quindi una ennupla:
+.EQ
+A sub 1 Times A sub 2 Times ... Times A sub n
+.EN
+
+Usualmente andremo a fare il prodotto cartesiano di un insieme con se stesso n volte:
+.EQ
+A sup n = A Times A Times ... Times A
+.EN
+.SA Relazioni
+.PP
+.B relazioni , "Le "
+che utilizzeremo per le funzioni sono una parte del prodotto cartesiano
+.LP
+Possiamo definire una relazione tra un solo insieme, per esempio
+.EQ
+A = txt"{ I lettori di questo libro }"
+.EN
+.EQ
+R = txt"{ L'eta di " x > 18 / forall x in A txt"}"
+.EN
+Questa è una relazione.
+.PP
+Di solito però useremo relazioni binarie, quindi che usa il prodotto tra insiemi(o anche un insieme per se stesso).
+.EQ
+A = txt"{ I lettori di questo libro }"
+.EN
+.EQ
+B = txt"{ Ragazzi studiosi }"
+.EN
+.EQ
+R = txt"{ I ragazzi studiosi che leggono questo libro }"
+.EN
+.EQ
+delim $$
+.EN
+Dati $A$ e $B$, due insiemi, una relazione è un sottoinsieme del prodotto cartesiano $A Times B$
