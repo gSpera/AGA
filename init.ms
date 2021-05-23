@@ -1,4 +1,5 @@
 .AM
+.so indice.ms
 .so macros.ms
 .EQ
 include macros.eqn
@@ -7,8 +8,15 @@ include macros.eqn
 .SH 1
 Introduzione
 .PP
-questo libro si pone l'obbiettivo di introddure l'algebra astratta in modo semplice e comprensibile, con raffigurazioni, immagini ed utilizzi dei concetti, senza però trascurare l'accuratezza delle informazioni.
-L'obbiettivo principale è quello di safamare la curiosità dei lettori, che si approcciano per la prima volta a questa materia rendendo concreti gli argomenti trattati.
+Questo libro si pone l'obbiettivo di introddure l'algebra astratta in modo semplice e comprensibile, con raffigurazioni, immagini ed utilizzi dei concetti, senza però trascurare l'accuratezza delle informazioni, sfamare la curiosità del lettore, che si approccia per la prima volta alla materia rendendo concreti gli argomenti trattati.
+.PP
+Nel corso del libro costruiremo la "matematica" partendo da pochi elementi fondamentali, in particolare in
+.ds CostruzioneNumeri \fB"Appendice A: Costruzione dei numeri"\fR
+.de CR
+\*[CostruzioneNumeri]
+..
+.CR CostruzioneNumeri
+ci occuperemo d costire i numeri che usiamo ogni giorno.
 
 .CA Insiemi, Relazioni e Funzioni
 In questo primo capitolo introdurremmo alcuni concetti fondamentali, che poi useremo per costruire tutte le nostre

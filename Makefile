@@ -1,4 +1,4 @@
-ROFF := eqn | pic | preconv | GROFF_FONT_PATH=fonts groff -ms -dpaper=a5 -P-pa5
+ROFF := m4 | eqn | pic | preconv | GROFF_FONT_PATH=fonts groff -ms -dpaper=a5 -P-pa5
 
 %.ps: %.ms macros.ms macros.eqn
 	cat $< | $(ROFF) > $@

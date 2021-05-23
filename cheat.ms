@@ -79,6 +79,7 @@ lunchroom to be less than unblessed. A conifer is a kitten from the right perspe
 In ancient times few can name a bosker server that isn't a dingbats zone. Those heights are nothing more than hills. Some posit the quaggy melody to be less than unversed. Authors often misinterpret the cause as an uptown form, when in actuality it feels more like a wizen Thursday.
 .CE "Lorem Ipsum"
 Few can name a yarer help that isn't a leachy dungeon. The errant date comes from an uncursed rise. In modern times a sarcoid cork is a badge of the mind. Ethiopias are folded menus. One cannot separate chives from sighted peaks.
+
 .SA Bullet list
 .PP
 .IP \(bu 
@@ -104,8 +105,6 @@ Centered text, with
 Right aligned text, with
 .I .RD
 .DE
-
-.BD
 
 .B1
 Text in box 
@@ -143,7 +142,6 @@ line from Q1 to Q3 chop
 line from Q2 to Q3 chop
 
 point("Point") at (0, 0.5)
-
 .PE
 
 .TC

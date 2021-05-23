@@ -8,6 +8,7 @@ define AND `\[AN]`
 define OR `\[OR]`
 define txt `roman`
 define Union `mathFont \(cu`
+define QED `mathFont \[u220E]`
 define Intersection `mathFont \(ca`
 define Times `mathFont \(mu`
 define Space `fwd 250`
