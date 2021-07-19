@@ -44,6 +44,7 @@
 \\$*
 .XE
 .PP
+.nr EquationCounter 1
 ..
 
 .de SA
@@ -62,4 +63,13 @@
 .LG
 \h`-1.2n`
 \\$2
+.nr EquationCounter 1
+..
+
+\" Equation
+.nr EquationCounter 1
+.de NumberedEquation
+.ds EquationString (\*(SN\\n[EquationCounter])
+.nr EquationCounter +1
+.ds Eq\\$1 \\*[EquationString]
 ..

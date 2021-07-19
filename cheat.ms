@@ -144,4 +144,22 @@ line from Q2 to Q3 chop
 point("Point") at (0, 0.5)
 .PE
 
+.SA Nuovo
+
+.nr EquationCounter 1
+
+.de NumberedEquation
+.ds EquationString (\*(SN\\n[EquationCounter])
+.nr EquationCounter +1
+.ds Eq\\$1 \\*[EquationString]
+..
+
+.NEQ A
+x
+.EN
+.NEQ Times
+times
+.EN
+Consideriamo \*[EqTimes] \*[EqA]
+
 .TC
